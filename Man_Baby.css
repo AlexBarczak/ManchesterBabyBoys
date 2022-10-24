@@ -156,9 +156,8 @@
     pointer-events: none;
   }
   .crt {
-    animation: textShadow 1.6s infinite;
+    animation: textShadow 5s infinite;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #191919;
+    color: #75c00c;
   }
-
-body{
-    background-color: pink;
-}
