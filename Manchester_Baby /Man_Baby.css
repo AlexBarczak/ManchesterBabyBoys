@@ -1,3 +1,4 @@
+/*Majority of this CSS has been taken from http://aleclownes.com/2017/02/01/crt-display.html*/
 @keyframes flicker {
     0% {
       opacity: 0.27861;
@@ -155,6 +156,8 @@
     background-size: 100% 2px, 3px 100%;
     pointer-events: none;
   }
+
+  /*CSS after this point is written or modified by ourselves*/
   .crt {
     animation: textShadow 5s infinite;
     font-family: 'Courier New', Courier, monospace;
@@ -167,6 +170,10 @@
   .heading{
     font-size:30px;
     padding:  50px 0px 50px 0px;
+  }
+
+  .nbgreen{
+    color:#75c00c;
   }
 
   .image{
