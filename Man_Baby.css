@@ -44,8 +44,20 @@
     color:#75c00c;
   }
 
-  img{
+  .img{
     margin: 25px;
     padding-bottom: 50px;
     max-width: 100%;
+  }
+
+  #ManchesterBaby{
+    float: right;
+    clear: right;
+    display: inline;
+    margin-left: 20px;
+  }
+
+  #IndexParagraphs{
+    float: left;
+    display: inline;
   }
