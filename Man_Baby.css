@@ -1,4 +1,5 @@
-/*Majority of this CSS has been taken from http://aleclownes.com/2017/02/01/crt-display.html*/
+/*This CSS has been adapted from http://aleclownes.com/2017/02/01/crt-display.html to achieve the CRT effect*/
+
   .crt::after {
     content: " ";
     display: block;
@@ -35,6 +36,7 @@
   }
 
 
+  /*This CSS has been written entirely by ourselves*/
   .heading{
     font-size:30px;
     padding:  50px 0px 50px 0px;
@@ -53,21 +55,23 @@
     list-style: none;
   }
 
-.typed-out{
-  overflow: hidden;
-  white-space: nowrap;
-  animation: 
-  typing 2s steps(30, end) forwards;
-  font-size: 1.6rem;
-  width: 0;
-  height: 10px;
-}
 
-.typeelement{
-  display: inline-block;
-}
+/*This CSS has been adapted from https://www.sitepoint.com/css-typewriter-effect */
+    .typed-out{
+      overflow: hidden;
+      white-space: nowrap;
+      animation: 
+      typing 2s steps(30, end) forwards;
+      font-size: 1.6rem;
+      width: 0;
+      height: 10px;
+    }
 
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
+    .typeelement{
+      display: inline-block;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
