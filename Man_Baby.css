@@ -52,3 +52,22 @@
   .noliststyle{
     list-style: none;
   }
+
+.typed-out{
+  overflow: hidden;
+  white-space: nowrap;
+  animation: 
+  typing 2s steps(30, end) forwards;
+  font-size: 1.6rem;
+  width: 0;
+  height: 20px;
+}
+
+.typeelement{
+  display: inline-block;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
