@@ -36,6 +36,25 @@
     padding-right: 50px;
   }
 
+/*This CSS has been adapted from https://www.sitepoint.com/css-typewriter-effect */
+.typed-out{
+  overflow: hidden;
+  white-space: nowrap;
+  animation: 
+  typing 2s steps(30, end) forwards;
+  font-size: 1.6rem;
+  width: 0;
+  height: 10px;
+}
+
+.typeelement{
+  display: inline-block;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
 
   /*This CSS has been written entirely by ourselves*/
   .heading{
@@ -57,22 +76,3 @@
   }
 
 
-/*This CSS has been adapted from https://www.sitepoint.com/css-typewriter-effect */
-    .typed-out{
-      overflow: hidden;
-      white-space: nowrap;
-      animation: 
-      typing 2s steps(30, end) forwards;
-      font-size: 1.6rem;
-      width: 0;
-      height: 10px;
-    }
-
-    .typeelement{
-      display: inline-block;
-    }
-
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
-    }

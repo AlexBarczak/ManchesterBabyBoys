@@ -28,14 +28,17 @@
                     <a class="nav-link nbgreen" href="Background.html">Background</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link nbgreen" aria-current="page" href="Williams_Kilburn_tube.html">Williams Kilburn tube</a>
+                    <a class="nav-link nbgreen" aria-current="page" href="Williams_Kilburn_tube.html">Tube</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link nbgreen" href="GenesisOfProject.html">Genesis of the Project</a>
+                    <a class="nav-link nbgreen" href="GenesisOfProject.html">Genesis</a>
                   </li>
                   <li class="nav-item">
                     <!--"Active' class is what shows navbar diplay as white for the active page"-->
-                    <a class="nav-link active nbgreen">Development and Design</a>
+                    <a class="nav-link active nbgreen">Development</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link nbgreen" href="Programming.html">Programming</a>
                   </li>
                 </ul>
               </div>
@@ -56,7 +59,7 @@
             <div class="col-6">
               <img width="200" src="../Images/BabyArchitecture_Altered.png" alt="Architectural schematic for Manchester Baby">
             </div>
-            <div class="col-6">
+            <div class="col-6 d-none d-sm-block">
               <img width="300" src="../Images/SSEM_Manchester_museum_close_up_Altered.png" alt="Architectural schematic for Manchester Baby">
             </div>
           </div>
@@ -64,12 +67,12 @@
         </div>
 
         <div class="row">
-            <div class="col-6">
+            <div class="col-sm-12 col-md-6">
                 <p>Although Newman played no engineering role in the development of the Baby, or any of the subsequent Manchester computers, he was generally supportive and enthusiastic about the project, and arranged for the acquisition of war-surplus supplies for its construction, including GPO metal racks[29] and "…the material of two complete Colossi"[30] from Bletchley.
 
                     By June 1948 the Baby had been built and was working.[24] It was 17 feet (5.2 m) in length, 7 feet 4 inches (2.24 m) tall, and weighed almost 1 long ton (1.0 t). The machine contained 550 valves (vacuum tubes)—300 diodes and 250 pentodes—and had a power consumption of 3500 watts.[31] The arithmetic unit was built using EF50 pentode valves, which had been widely used during wartime.[25] The Baby used one Williams tube to provide 32 by 32-bit words of random-access memory (RAM), a second to hold a 32-bit accumulator in which the intermediate results of a calculation could be stored temporarily, and a third to hold the current program instruction along with its address in memory. A fourth CRT, without the storage electronics of the other three, was used as the output device, able to display the bit pattern of any selected storage tube.[32]</p>
             </div>
-            <div class="col-6">
+            <div class="col-sm-12 col-md-6">
                 <p>Each 32-bit word of RAM could contain either a program instruction or data. In a program instruction, bits 0–12 represented the memory address of the operand to be used, and bits 13–15 specified the operation to be executed, such as storing a number in memory; the remaining 16 bits were unused.[32] The Baby's 0-operand instruction set|single operand architecture meant that the second operand of any operation was implicit: the accumulator or the program counter (instruction address); program instructions specified only the address of the data in memory.
 
                     A word in the computer's memory could be read, written, or refreshed, in 360 microseconds. An instruction took four times as long to execute as accessing a word from memory, giving an instruction execution rate of about 700 per second. The main store was refreshed continuously, a process that took 20 milliseconds to complete, as each of the Baby's 32 words had to be read and then refreshed in sequence.[24]</p>
