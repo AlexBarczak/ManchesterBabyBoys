@@ -62,17 +62,43 @@
     padding:  50px 0px 50px 0px;
   }
 
+  header{
+    margin: 15px 0 25px 0;
+  }
+
   .nbgreen{
     color:#75c00c;
   }
 
-  .image{
+  .img{
     margin: 25px;
     padding-bottom: 50px;
+    max-width: 100%;
+  }
+
+  #ManchesterBaby{
+    float: right;
+    clear: right;
+    display: inline;
+    margin-left: 20px;
+    width:400px;
+    margin-bottom: 20px;
+  }
+
+  #IndexParagraphs{
+    float: left;
+    display: inline;
+  }
+
+  @media screen and (max-width: 650px) {
+    #ManchesterBaby {
+      clear: both;
+      width: 100%;
+    }
+  }
+
   }
 
   .noliststyle{
     list-style: none;
   }
-
-
