@@ -5,12 +5,106 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!--Link to Bootstrap and our external CSS Page-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../Man_Baby.css">
     
+    <!--Title of the page-->
     <title>Development and Design of Manchester Baby</title>
 </head>
-<body>
+
+<!--Make body "CRT" to set all elements displayed on page to correct styling-->
+<body class="crt">
+    <header>
+
+        <!--Navbar implemented with bootstrap-->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+              <a class="navbar-brand nbgreen" href="Index.html">The Manchester Baby</a>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link nbgreen" href="Background.html">Background</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link nbgreen" aria-current="page" href="Williams_Kilburn_tube.html">Tube</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link nbgreen" href="GenesisOfProject.html">Genesis</a>
+                  </li>
+                  <li class="nav-item">
+                    <!--"Active' class is what shows navbar diplay as white for the active page"-->
+                    <a class="nav-link active nbgreen">Development</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link nbgreen" href="Programming.html">Programming</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <section class="typeelement">
+          <p class="heading typed-out">Development and Design</p>
+        </section>
+         
+
+
+        <div class="container text-center py-5">
+          <div class="row">
+            <div class="col-6">
+              <img width="200" src="../Images/BabyArchitecture_Altered.png" alt="Architectural schematic for Manchester Baby">
+            </div>
+            <div class="col-6 d-none d-sm-block">
+              <img width="300" src="../Images/SSEM_Manchester_museum_close_up_Altered.png" alt="Architectural schematic for Manchester Baby">
+            </div>
+          </div>
+            
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <p>Although Newman played no engineering role in the development of the Baby, or any of the subsequent Manchester computers, he was generally supportive and enthusiastic about the project, and arranged for the acquisition of war-surplus supplies for its construction, including GPO metal racks[29] and "…the material of two complete Colossi"[30] from Bletchley.
+
+                    By June 1948 the Baby had been built and was working.[24] It was 17 feet (5.2 m) in length, 7 feet 4 inches (2.24 m) tall, and weighed almost 1 long ton (1.0 t). The machine contained 550 valves (vacuum tubes)—300 diodes and 250 pentodes—and had a power consumption of 3500 watts.[31] The arithmetic unit was built using EF50 pentode valves, which had been widely used during wartime.[25] The Baby used one Williams tube to provide 32 by 32-bit words of random-access memory (RAM), a second to hold a 32-bit accumulator in which the intermediate results of a calculation could be stored temporarily, and a third to hold the current program instruction along with its address in memory. A fourth CRT, without the storage electronics of the other three, was used as the output device, able to display the bit pattern of any selected storage tube.[32]</p>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <p>Each 32-bit word of RAM could contain either a program instruction or data. In a program instruction, bits 0–12 represented the memory address of the operand to be used, and bits 13–15 specified the operation to be executed, such as storing a number in memory; the remaining 16 bits were unused.[32] The Baby's 0-operand instruction set|single operand architecture meant that the second operand of any operation was implicit: the accumulator or the program counter (instruction address); program instructions specified only the address of the data in memory.
+
+                    A word in the computer's memory could be read, written, or refreshed, in 360 microseconds. An instruction took four times as long to execute as accessing a word from memory, giving an instruction execution rate of about 700 per second. The main store was refreshed continuously, a process that took 20 milliseconds to complete, as each of the Baby's 32 words had to be read and then refreshed in sequence.[24]</p>
+            </div>
+
+            <!--Added vertical padding to space elements correctly-->
+            <div class="col-12 py-3">
+                The Baby represented negative numbers using two's complement,[33] as most computers still do. In that representation, the value of the most significant bit denotes the sign of a number; positive numbers have a zero in that position and negative numbers a one. Thus, the range of numbers that could be held in each 32-bit word was −231 to +231 − 1 (decimal: −2,147,483,648 to +2,147,483,647).
+            </div>
+        </div>
+      </div>
+       
+    </main>
+
+    <footer class="mt-5">
+        <div class="container text-light">
+          <hr>
+            <div class="row">
+                <div class="col">
+                    <ul class="noliststyle">    
+                        <li>Alex G</li>
+                        <li>Alex B</li>
+                        <li>Andrew L</li>
+                        <li>Zihan T</li>
+                    </ul>
+                </div>
+    
+                <div class="col  mt-3">
+                    Copyright © group 8, All rights reserved
+                </div>
+            </div>
+        </div>
+    </footer>
     
 </body>
