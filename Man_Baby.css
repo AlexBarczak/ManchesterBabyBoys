@@ -76,7 +76,7 @@
     max-width: 100%;
   }
 
-  #ManchesterBaby{
+  .ManchesterBabyImage{
     float: right;
     clear: right;
     display: inline;
@@ -91,7 +91,7 @@
   }
 
   @media screen and (max-width: 650px) {
-    #ManchesterBaby {
+    .ManchesterBabyImage {
       clear: both;
       width: 100%;
     }
@@ -99,4 +99,12 @@
 
   .noliststyle{
     list-style: none;
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+
+  td {
+    padding: 5px 0px 5px 0px;
   }
