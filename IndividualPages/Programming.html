@@ -120,9 +120,16 @@
           </table>
         </div>
 
+        <p>The awkward negative operations were a consequence of the Baby's lack of hardware to perform any arithmetic operations except subtraction and negation. It was considered unnecessary to build an adder before testing could begin as addition can easily be implemented by subtraction, i.e. x+y can be computed as -(-x-y). Therefore, adding two numbers together, X and Y, required four instructions:</p>
+        <pre>
+          <p>LDN X // load negative X into the accumulator</p>
+          <p>SUB Y // subtract Y from the value in the accumulator</p>
+          <p>STO S // store the result at S</p>
+          <p>LDN S // load negative value at S into the accumulator</p>
+        </pre>
       </main>
 
-      <footer class="mt-5">
+      <footer class="my-5">
         <div class="container text-light">
           <hr>
             <div class="row">
