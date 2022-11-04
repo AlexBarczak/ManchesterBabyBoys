@@ -61,7 +61,114 @@
         </nav>     
       </header>
 
-      <main>
+      <main class="container-md">
+        <!-- Make div take up space to bottom of image and not have the image draw over elements below -->
+        <div class="clearfix">
+          <!-- make image float and resize -->
+          <img class="ManchesterBabyImage" src="../Images/SSEM_Manchester_museum_close_up_Altered.png" alt="Close up of the crt output">
 
-      </main>
+          <!-- Make element type out as you load in -->
+          <section class="typeelement">
+            <p class="heading typed-out">Programming of Manchester Baby</p>
+          </section>
+          
+          <p>The Baby's instruction format had a three-bit operation code field, which allowed a maximum of eight (2^3) different instructions. In contrast to the modern convention, the machine's storage was described with the least significant digits to the left; thus a one was represented in three bits as "100", rather than the more conventional "001".</p>  
+        </div>
+        <div class="my-4">
+          <h3 class="text-center">Baby's instruction set</h3>
+          <table>
+            <tr>
+              <th>Binary code</th>
+              <th>Original notation</th>
+              <th>Modern mnemonic</th>
+              <th>Operation</th>
+            </tr>
+            <tr>
+              <td>000</td>
+              <td>S, Cl</td>
+              <td>JMP S</td>
+              <td>Jump to the instruction at the address obtained from the specified memory address S (absolute unconditional jump) </td>
+            </tr>
+            <tr>
+              <td>100</td>
+              <td>Add S, Cl</td>
+              <td>JRP S</td>
+              <td>Jump to the instruction at the program counter plus (+) the relative value obtained from the specified memory address S[a] (relative unconditional jump)</td>
+            </tr>
+            <tr>
+              <td>010</td>
+              <td>-S, C</td>
+              <td>LDN S</td>
+              <td>Take the number from the specified memory address S, negate it, and load it into the accumulator</td>
+            </tr>
+            <tr>
+              <td>110</td>
+              <td>c, S</td>
+              <td>STO S</td>
+              <td> 	Store the number in the accumulator to the specified memory address S</td>
+            </tr>
+            <tr>
+              <td>001 or 101</td>
+              <td>SUB S</td>
+              <td>SUB S</td>
+              <td>Subtract the number at the specified memory address S from the value in accumulator, and store the result in the accumulator</td>
+            </tr>
+            <tr>
+              <td>011</td>
+              <td>Test</td>
+              <td>CMP</td>
+              <td>Skip next instruction if the accumulator contains a negative value</td>
+            </tr>
+            <tr>
+              <td>111</td>
+              <td>Stop</td>
+              <td>STP</td>
+              <td>Stop</td>
+            </tr>
+          </table>
+        </div>
+
+        <p>The awkward negative operations were a consequence of the Baby's lack of hardware to perform any arithmetic operations except subtraction and negation. It was considered unnecessary to build an adder before testing could begin as addition can easily be implemented by subtraction, i.e. x+y can be computed as -(-x-y). Therefore, adding two numbers together, X and Y, required four instructions:</p>
+
+        <!-- Add margin to the left to seperate from everything else -->
+        <div class="ms-4">
+          <b>
+            <p>LDN X // load negative X into the accumulator</p>
+            <p>SUB Y // subtract Y from the value in the accumulator</p>
+            <p>STO S // store the result at S</p>
+            <p>LDN S // load negative value at S into the accumulator</p>
+          </b>
+        </div>
+
+        <p>Programs were entered in binary form by stepping through each word of memory in turn, and using a set of 32 buttons and switches known as the input device to set the value of each bit of each word to either 0 or 1. The Baby had no paper-tape reader or punch.</p>
+
+        <section>
+          <!-- make image float and resize -->
+          <img class="ManchesterBabyImage" src="../Images/_Altered.png" alt="Close up of the crt output">
+
+          <h2>First Program</h2>
+          <p>Three programs were written for the computer. The first, consisting of 17 instructions, was written by Kilburn, and so far as can be ascertained first ran on 21 June 1948.  It was designed to find the highest proper factor of 2^18 (262,144) by trying every integer from 2^18 - 1 downwards. The divisions were implemented by repeated subtractions of the divisor. The Baby took 3.5 million operations and 52 minutes to produce the answer (131,072). The program used eight words of working storage in addition to its 17 words of instructions, giving a program size of 25 words.</p>
+          <p>Geoff Tootill wrote an amended version of the program the following month, and in mid-July Alan Turing — who had been appointed as a reader in the mathematics department at Manchester University in September 1948 — submitted the third program, to carry out long division. Turing had by then been appointed to the nominal post of Deputy Director of the Computing Machine Laboratory at the university, although the laboratory did not become a physical reality until 1951.</p>
+        </section>
+        
+
+      <footer class="my-5">
+        <div class="container text-light">
+          <hr>
+            <div class="row">
+                <div class="col">
+                    <ul class="noliststyle">    
+                        <li>Alex G</li>
+                        <li>Alex B</li>
+                        <li>Andrew L</li>
+                        <li>Zihan T</li>
+                    </ul>
+                </div>
+      
+                <div class="col  mt-3">
+                    Copyright © group 8, All rights reserved
+                </div>
+            </div>
+        </div>
+      </footer>
 </body>
