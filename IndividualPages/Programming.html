@@ -64,9 +64,9 @@
       <main class="container-md">
         <div class="clearfix">
           <img class="ManchesterBabyImage" src="../Images/SSEM_Manchester_museum_close_up_Altered.png" alt="Close up of the crt output">
-          <p>The Baby's instruction format had a three-bit operation code field, which allowed a maximum of eight (23) different instructions. In contrast to the modern convention, the machine's storage was described with the least significant digits to the left; thus a one was represented in three bits as "100", rather than the more conventional "001".</p>  
+          <p>The Baby's instruction format had a three-bit operation code field, which allowed a maximum of eight (2^3) different instructions. In contrast to the modern convention, the machine's storage was described with the least significant digits to the left; thus a one was represented in three bits as "100", rather than the more conventional "001".</p>  
         </div>
-        <div class="mt-5">
+        <div class="my-4">
           <h3 class="text-center">Baby's instruction set</h3>
           <table>
             <tr>
@@ -121,13 +121,23 @@
         </div>
 
         <p>The awkward negative operations were a consequence of the Baby's lack of hardware to perform any arithmetic operations except subtraction and negation. It was considered unnecessary to build an adder before testing could begin as addition can easily be implemented by subtraction, i.e. x+y can be computed as -(-x-y). Therefore, adding two numbers together, X and Y, required four instructions:</p>
-        <pre>
-          <p>LDN X // load negative X into the accumulator</p>
-          <p>SUB Y // subtract Y from the value in the accumulator</p>
-          <p>STO S // store the result at S</p>
-          <p>LDN S // load negative value at S into the accumulator</p>
-        </pre>
-      </main>
+
+        <div class="ms-4">
+          <b>
+            <p>LDN X // load negative X into the accumulator</p>
+            <p>SUB Y // subtract Y from the value in the accumulator</p>
+            <p>STO S // store the result at S</p>
+            <p>LDN S // load negative value at S into the accumulator</p>
+          </b>
+        </div>
+
+        <p>Programs were entered in binary form by stepping through each word of memory in turn, and using a set of 32 buttons and switches known as the input device to set the value of each bit of each word to either 0 or 1. The Baby had no paper-tape reader or punch.</p>
+
+        <section>
+          <h2>First Program</h2>
+          <p>Three programs were written for the computer. The first, consisting of 17 instructions, was written by Kilburn, and so far as can be ascertained first ran on 21 June 1948.  It was designed to find the highest proper factor of 2^18 (262,144) by trying every integer from 2^18 - 1 downwards. The divisions were implemented by repeated subtractions of the divisor. The Baby took 3.5 million operations and 52 minutes to produce the answer (131,072). The program used eight words of working storage in addition to its 17 words of instructions, giving a program size of 25 words.</p>
+        </section>
+        
 
       <footer class="my-5">
         <div class="container text-light">
