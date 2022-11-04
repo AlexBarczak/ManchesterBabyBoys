@@ -61,7 +61,84 @@
         </nav>     
       </header>
 
-      <main>
+      <main class="container-md">
+        <div class="clearfix">
+          <img class="ManchesterBabyImage" src="../Images/SSEM_Manchester_museum_close_up_Altered.png" alt="Close up of the crt output">
+          <p>The Baby's instruction format had a three-bit operation code field, which allowed a maximum of eight (23) different instructions. In contrast to the modern convention, the machine's storage was described with the least significant digits to the left; thus a one was represented in three bits as "100", rather than the more conventional "001".</p>  
+        </div>
+        <div class="mt-5">
+          <h3 class="text-center">Baby's instruction set</h3>
+          <table>
+            <tr>
+              <th>Binary code</th>
+              <th>Original notation</th>
+              <th>Modern mnemonic</th>
+              <th>Operation</th>
+            </tr>
+            <tr>
+              <td>000</td>
+              <td>S, Cl</td>
+              <td>JMP S</td>
+              <td>Jump to the instruction at the address obtained from the specified memory address S (absolute unconditional jump) </td>
+            </tr>
+            <tr>
+              <td>100</td>
+              <td>Add S, Cl</td>
+              <td>JRP S</td>
+              <td>Jump to the instruction at the program counter plus (+) the relative value obtained from the specified memory address S[a] (relative unconditional jump)</td>
+            </tr>
+            <tr>
+              <td>010</td>
+              <td>-S, C</td>
+              <td>LDN S</td>
+              <td>Take the number from the specified memory address S, negate it, and load it into the accumulator</td>
+            </tr>
+            <tr>
+              <td>110</td>
+              <td>c, S</td>
+              <td>STO S</td>
+              <td> 	Store the number in the accumulator to the specified memory address S</td>
+            </tr>
+            <tr>
+              <td>001 or 101</td>
+              <td>SUB S</td>
+              <td>SUB S</td>
+              <td>Subtract the number at the specified memory address S from the value in accumulator, and store the result in the accumulator</td>
+            </tr>
+            <tr>
+              <td>011</td>
+              <td>Test</td>
+              <td>CMP</td>
+              <td>Skip next instruction if the accumulator contains a negative value</td>
+            </tr>
+            <tr>
+              <td>111</td>
+              <td>Stop</td>
+              <td>STP</td>
+              <td>Stop</td>
+            </tr>
+          </table>
+        </div>
 
       </main>
+
+      <footer class="mt-5">
+        <div class="container text-light">
+          <hr>
+            <div class="row">
+                <div class="col">
+                    <ul class="noliststyle">    
+                        <li>Alex G</li>
+                        <li>Alex B</li>
+                        <li>Andrew L</li>
+                        <li>Zihan T</li>
+                    </ul>
+                </div>
+      
+                <div class="col  mt-3">
+                    Copyright © group 8, All rights reserved
+                </div>
+            </div>
+        </div>
+      </footer>
 </body>
